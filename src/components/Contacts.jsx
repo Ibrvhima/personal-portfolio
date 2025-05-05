@@ -75,7 +75,9 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-blue-700 mb-4">Contactez-moi</h2>
+          <h2 className="text-3xl font-bold text-blue-700 mb-4">
+            Contactez-moi
+          </h2>
           <p className="text-gray-700 text-lg mb-6 leading-relaxed">
             Si vous avez des questions ou souhaitez discuter d'un projet,
             n'hésitez pas à me contacter !
