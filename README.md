@@ -40,7 +40,7 @@ mon-portfolio/
 
 ## 🌍 Deployment
 
-This site is deployed on **Netlify** (or **Vercel**)  
+This site is deployed on **Netlify**  
 👉 [🔗 View Live Site](https://your-deployment-link.netlify.app)
 
 ---
