@@ -41,7 +41,7 @@ mon-portfolio/
 ## 🌍 Deployment
 
 This site is deployed on **Netlify**  
-👉 [🔗 View Live Site](https://your-deployment-link.netlify.app)
+👉 [🔗 View Live Site](https://mon-portfoli0.netlify.app/)
 
 ---
 
