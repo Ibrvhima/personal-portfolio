@@ -24,7 +24,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation simple
     if (!formData.name || !formData.email || !formData.message) {
       setStatusMessage("Veuillez remplir tous les champs.");
       return;
@@ -33,12 +32,34 @@ export default function Contact() {
     setIsSubmitting(true);
     setStatusMessage("");
 
-    // Simuler l'envoi du formulaire
-    setTimeout(() => {
-      setStatusMessage("Message envoyé avec succès !");
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitting(false);
-    }, 1500);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "c6fbff5e-08bd-4821-9ee2-dfc02fb68164",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: "Nouveau message depuis le portfolio",
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatusMessage("Message envoyé avec succès !");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatusMessage("Erreur : " + data.message);
+      }
+    } catch (error) {
+      setStatusMessage("Une erreur est survenue. Veuillez réessayer.");
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
