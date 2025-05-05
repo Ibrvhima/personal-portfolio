@@ -33,9 +33,9 @@ export default function Hero() {
 
           <div className="flex justify-center md:justify-start items-center gap-5 mt-6">
             {[{
-              Icon: FaGithub, link: "https://github.com/tonprofil", label: "GitHub"
+              Icon: FaGithub, link: "https://github.com/Ibrvhima", label: "GitHub"
             }, {
-              Icon: FaLinkedin, link: "https://linkedin.com/in/tonprofil", label: "LinkedIn"
+              Icon: FaLinkedin, link: "https://www.linkedin.com/in/ibrahima-diallo-749a8a281/", label: "LinkedIn"
             }, {
               Icon: FaTwitter, link: "https://twitter.com/tonprofil", label: "Twitter"
             }].map(({ Icon, link, label }, index) => (
