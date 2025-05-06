@@ -5,12 +5,11 @@ export default function Footer() {
     <footer className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 text-white py-6 mt-20">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
         
-        {/* Texte copyright */}
+    
         <p className="text-sm mb-4 md:mb-0">
           &copy; {new Date().getFullYear()} Ibrahima Diallo. Tous droits réservés.
         </p>
 
-        {/* Liens sociaux */}
         <div className="flex gap-6 text-xl">
           <a
             href="https://github.com/ton-github"
