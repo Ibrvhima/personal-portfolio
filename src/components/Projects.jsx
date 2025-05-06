@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
@@ -33,15 +34,6 @@ const projects = [
     link: "https://eat-n-split-eta-two.vercel.app",
     github: "https://github.com/Ibrvhima/eat-n-split.git",
   },
-
-  {
-     title: "Techno Skills",
-     description:
-       "Techno Skills est une application web intuitive et moderne conçue pour aider les développeurs, étudiants, formateurs et professionnels à organiser, suivre et valoriser leurs compétences techniques.",
-     image: "/technoskills.png",
-     link: "https://technology-skills.vercel.app",
-     github: "https://github.com/Ibrvhima/technology_skills.git",
-   }
 ];
 
 export default function Projects() {
@@ -58,7 +50,8 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm w-full mx-auto"
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm w-full mx-auto transition-transform hover:shadow-lg"
             >
               <img
                 src={project.image}
@@ -75,16 +68,18 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition"
+                    className="flex items-center gap-2 text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition"
                   >
+                    <FiExternalLink />
                     Voir
                   </a>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition"
+                    className="flex items-center gap-2 text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition"
                   >
+                    <FiGithub />
                     Code
                   </a>
                 </div>
